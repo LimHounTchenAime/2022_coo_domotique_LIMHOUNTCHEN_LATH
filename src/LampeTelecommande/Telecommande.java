@@ -12,8 +12,8 @@ public class Telecommande {
     //methodes
     public void ajouterLampe(Lampe lampe){
         Lampe[] tmp=lampes;
-        lampes=new Lampe[lampe.length+1];
-        lampes[tmp.length]=new Lampe(lampe);
+        lampes=new Lampe[lampes.length+1];
+        lampes[tmp.length]=lampe;
         for(int i=0;i<tmp.length;i++)
             lampes[i]=tmp[i];
     }
@@ -34,7 +34,7 @@ public class Telecommande {
     public String toString(){
         String res="";
         for(int i=0;i<lampes.length;i++){
-            res+="Lampe "+i+" :"+lampes[i].allume();
+            res+="Lampe "+i+" :"+lampes[i].isAllume();
         }
         return res;
     }
