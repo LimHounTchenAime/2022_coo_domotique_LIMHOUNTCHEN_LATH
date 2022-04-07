@@ -18,7 +18,7 @@ public class Lampe {
 
     public String toString() {
         String s = "";
-        s += "Nom de la lampe : " + this.nom + "\tEtat de la lampe : " + this.allume
+        s += "Nom de la lampe : " + this.nom + "\tEtat de la lampe : " + this.allume;
         return s;
     }
 
