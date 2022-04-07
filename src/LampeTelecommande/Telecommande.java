@@ -1,40 +1,38 @@
 package LampeTelecommande;
 
+import java.util.ArrayList;
+
 public class Telecommande {
     //attributs
-    private Lampe[] lampes;
+    private ArrayList<Lampe> lampes;
 
     //constructeur
     public Telecommande(){
-        lampes=new Lampe[0];
+        lampes=new ArrayList<Lampe>();
     }
 
     //methodes
     public void ajouterLampe(Lampe lampe){
-        Lampe[] tmp=lampes;
-        lampes=new Lampe[lampes.length+1];
-        lampes[tmp.length]=lampe;
-        for(int i=0;i<tmp.length;i++)
-            lampes[i]=tmp[i];
+        lampes.add(lampe);
     }
 
     public void activerLampe(int indiceLampe){
-        lampes[indiceLampe].allumer();
+        lampes.get(indiceLampe).allumer();
     }
 
     public void desactiverLampe(int indiceLampe){
-        lampes[indiceLampe].eteindre();
+        lampes.get(indiceLampe).eteindre();
     }
 
     public void activerTout(){
-        for(int i=0;i<lampes.length;i++)
-            lampes[i].allumer();
+        for(int i=0;i<lampes.size();i++)
+            lampes.get(i).allumer();
     }
 
     public String toString(){
         String res="";
-        for(int i=0;i<lampes.length;i++){
-            res+="Lampe "+i+" :"+lampes[i].isAllume();
+        for(int i=0;i<lampes.size();i++){
+            res+="Lampe "+i+" :"+lampes.get(i).isAllume();
         }
         return res;
     }
