@@ -1,3 +1,5 @@
+package LampeTelecommande;
+
 public class Telecommande {
     //attributs
     private Lampe[] lampes;
