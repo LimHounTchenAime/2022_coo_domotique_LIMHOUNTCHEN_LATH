@@ -20,7 +20,10 @@ public class Lampe {
 
     public String toString() {
         String s = "";
-        s += "Nom de la lampe : " + this.nom + "\tEtat de la lampe : " + this.allume;
+        if (this.allume)
+            s += this.nom + ": " + "On";
+        else
+            s += this.nom + ": " + "Off";
         return s;
     }
 
