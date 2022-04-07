@@ -29,10 +29,14 @@ public class Telecommande {
             lampes.get(i).allumer();
     }
 
+    public Lampe get(int i){
+        return lampes.get(i);
+    }
+
     public String toString(){
         String res="";
         for(int i=0;i<lampes.size();i++){
-            res+="Lampe "+i+" :"+lampes.get(i).isAllume();
+            res+=lampes.get(i).toString();
         }
         return res;
     }
