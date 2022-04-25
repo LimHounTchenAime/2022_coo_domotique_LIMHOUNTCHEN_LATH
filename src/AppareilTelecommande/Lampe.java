@@ -1,4 +1,4 @@
-package LampeTelecommande;
+package AppareilTelecommande;
 
 public class Lampe {
     private String nom;

@@ -1,4 +1,4 @@
-package LampeTelecommande;
+package AppareilTelecommande;
 
 /**
  * classe qui represente une chaine hifi
