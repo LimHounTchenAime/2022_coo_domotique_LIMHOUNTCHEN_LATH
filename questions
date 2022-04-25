@@ -1,0 +1,24 @@
+Q3
+On a ajouté une interface Appareil.
+On a dû écrire les étiquettes des méthodes dans l'interface.
+On a dû rajouter des implements dans les classes lampe et hifi.
+On a dû modifier l'arrayList de lampe par une arrayList d'appareils.
+On a modifié une dizaine de lignes.
+
+Q5
+On a pu éviter les copier-coller grâce à l'interface.
+En cas de bug, il faudra modifier un nombre de lignes proportionnel au nombre d'appareils.
+
+Q6
+Les flèches vont des types d'appareils vers l'interface Appareil et la Telecommande pointe vers la classe Appareil.
+Si on modifiait le nom des méthodes, il y aurait erreur de compilation en raison de l'implements qui ne détecte pas le nom de l'interface.
+
+Q7
+La Telecommande permet de manipuler tout type d'appareils.
+Chaque appareil doit avoir comme méthode : allumer, éteindre, toString et isAllume pour pouvoir implémenter l'interface Appareil.
+
+Q12
+La problématique qu'on avait concernait l'ajout de plusieurs types d'appareils ayant les mêmes fonctions.
+La contrainte de faire des copier-coller impacte le temps de travail et en cas de bug, l'entièreté du programme.
+L'interface permet de regrouper des types d'éléments ayant les mêmes fonctions, mais des comportements différents (Lampe et Hifi).
+La manipulation de l'interface permet d'éviter les copier-coller et de garder de la lisibilité dans le code.
