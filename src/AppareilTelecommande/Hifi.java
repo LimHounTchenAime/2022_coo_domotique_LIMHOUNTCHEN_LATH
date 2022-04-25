@@ -3,7 +3,7 @@ package AppareilTelecommande;
 /**
  * classe qui represente une chaine hifi
  */
-class Hifi {
+class Hifi implements Appareil{
     /**
      * l ' intensite du son de la chaine on suppose que la chaine est eteinte si
      * le son vaut 0
@@ -33,5 +33,9 @@ class Hifi {
         String r = " " ;
         r += " Hifi : " + son ;
         return ( r );
+    }
+
+    public boolean isAllume(){
+        return(this.son>0);
     }
 }

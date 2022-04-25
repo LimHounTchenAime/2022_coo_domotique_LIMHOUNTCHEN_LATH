@@ -1,6 +1,6 @@
 package AppareilTelecommande;
 
-public class Lampe {
+public class Lampe implements Appareil{
     private String nom;
     private boolean allume;
 

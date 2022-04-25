@@ -2,7 +2,7 @@ package AppareilTelecommande;
 
 import java.util.ArrayList;
 
-public class Telecommande {
+public class Telecommande{
     //attributs
     private ArrayList<Appareil> appareils;
 
