@@ -119,4 +119,16 @@ public class TestTelecommande {
         //verification
         assertEquals(2, telecommande.getNombre());
     }
+
+    @Test
+    public void testChemine(){
+        Cheminee c1 = new Cheminee();
+        AdapterCheminee ac1 = new AdapterCheminee(c1);
+        assertFalse(ac1.isAllume());
+        ac1.allumer();
+        assertTrue(ac1.isAllume());
+        ac1.eteindre();
+        assertFalse(ac1.isAllume());
+
+    }
 }
