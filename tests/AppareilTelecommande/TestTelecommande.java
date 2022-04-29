@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TelecommandeTest {
+public class TestTelecommande {
 
     /**
      * test du constructeur de lampe
@@ -103,4 +103,20 @@ public class TelecommandeTest {
 
     }
 
+
+    /**
+     * test getNombre 2 appareils
+     */
+    @Test
+    public void testGetNombre(){
+        //initialisation
+        Telecommande telecommande=new Telecommande();
+        Appareil lampe=new Lampe("lampe");
+        Appareil hifi=new Hifi();
+        telecommande.ajouterAppareil(lampe);
+        telecommande.ajouterAppareil(hifi);
+
+        //verification
+        assertEquals(2, telecommande.getNombre());
+    }
 }
