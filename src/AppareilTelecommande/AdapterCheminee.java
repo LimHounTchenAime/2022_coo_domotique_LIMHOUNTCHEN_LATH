@@ -1,9 +1,10 @@
 package AppareilTelecommande;
 
-public class AdapterCheminee{
+public class AdapterCheminee implements Appareil{
     private Cheminee cheminee;
 
     public AdapterCheminee(Cheminee cheminee2){
+
         this.cheminee=cheminee2;
     }
 
@@ -14,4 +15,6 @@ public class AdapterCheminee{
     public void eteindre(){
         this.cheminee.changerIntensite(0);
     }
+
+
 }
