@@ -14,4 +14,8 @@ public class AdapterCheminee{
     public void eteindre(){
         this.cheminee.changerIntensite(0);
     }
+
+    public boolean isAllume(){
+        return this.cheminee.getLumiere()>0;
+    }
 }
