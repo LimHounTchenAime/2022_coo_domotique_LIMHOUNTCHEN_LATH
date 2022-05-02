@@ -1,14 +1,15 @@
 package AppareilTelecommande;
 
+import appartement.AppareilAppart;
 import appartement.AppareilAppartThermostat;
 
-public class AdapterAppartThermostat {
+public class AdapterAppartThermostat implements Appareil{
     private AppareilAppartThermostat appareilAppartThermostat;
-    private String nom;
 
-    AdapterAppartThermostat(AppareilAppartThermostat aat, String n){
-        this.appareilAppartThermostat=aat;
-        this.nom=n;
+
+    AdapterAppartThermostat(AppareilAppart aat){
+        this.appareilAppartThermostat=(AppareilAppartThermostat) aat;
+
     }
 
     public void allumer(){
@@ -24,6 +25,6 @@ public class AdapterAppartThermostat {
     }
 
     public String toString(){
-        return(this.appareilAppartThermostat.toString()+" nom : "+this.nom);
+        return(this.appareilAppartThermostat.toString());
     }
 }
