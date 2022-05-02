@@ -1,5 +1,7 @@
 package AppareilTelecommande;
 
+import thermos.Thermostat;
+
 public class Main {
 
     public static void main(String args[]) {
@@ -20,7 +22,9 @@ public class Main {
 
         TelecommandeGraphique tg = new TelecommandeGraphique(t);
 
-
+        Thermostat tm = new Thermostat();
+        AdapterThermostat at = new AdapterThermostat(tm);
+        t.ajouterAppareil(at);
     }
 
 }
