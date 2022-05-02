@@ -8,9 +8,10 @@ public class AdapterAppartLumiere implements Appareil {
     private AppareilAppartLampe adapter;
     private String nom;
 
-    AdapterAppartLumiere(AppareilAppart a,String piece) {
+
+    AdapterAppartLumiere(AppareilAppart a,String nom) {
         this.adapter = (AppareilAppartLampe) a;
-        this.nom=piece;
+        this.nom = nom;
     }
 
     public void allumer() {
@@ -28,6 +29,6 @@ public class AdapterAppartLumiere implements Appareil {
     }
 
     public String toString(){
-        return this.adapter.toString()+this.nom;
+        return this.adapter.toString() + " Nom : "+ this.nom;
     }
 }
