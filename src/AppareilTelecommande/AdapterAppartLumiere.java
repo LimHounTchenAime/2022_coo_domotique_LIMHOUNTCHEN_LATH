@@ -6,10 +6,11 @@ import appartement.AppareilAppartLampe;
 public class AdapterAppartLumiere implements Appareil {
 
     private AppareilAppartLampe adapter;
-
+    private String nom;
 
     AdapterAppartLumiere(AppareilAppart a,String piece) {
         this.adapter = (AppareilAppartLampe) a;
+        this.nom=piece;
     }
 
     public void allumer() {
@@ -27,6 +28,6 @@ public class AdapterAppartLumiere implements Appareil {
     }
 
     public String toString(){
-        return this.adapter.toString();
+        return this.adapter.toString()+this.nom;
     }
 }
