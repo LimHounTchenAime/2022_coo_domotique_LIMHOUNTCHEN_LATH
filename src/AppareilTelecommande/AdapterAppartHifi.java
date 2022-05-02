@@ -9,8 +9,8 @@ public class AdapterAppartHifi implements Appareil {
     private AppareilAppartHifi adapterHifi;
 
 
-    AdapterAppartHifi(AppareilAppartHifi a){
-        this.adapterHifi = a;
+    AdapterAppartHifi(AppareilAppart a){
+        this.adapterHifi = (AppareilAppartHifi) a;
     }
 
     /**
