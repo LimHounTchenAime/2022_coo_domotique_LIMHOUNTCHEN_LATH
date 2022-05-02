@@ -6,7 +6,7 @@ public class AdapterThermostat implements Appareil {
     private Thermostat thermostat;
     private int temperature;
 
-    public AdapterCheminee(Thermostat t) {
+    AdapterThermostat(Thermostat t) {
         this.thermostat = t;
         this.temperature = 20;
     }
@@ -14,21 +14,22 @@ public class AdapterThermostat implements Appareil {
     public void allumer() {
         for (int i = 0; i<20;i++) {
             this.thermostat.monterTemperature();
+            this.temperature+=1;
         }
     }
 
     public void eteindre() {
         for (int i = 0; i<20;i++) {
             this.thermostat.baisserTemperature();
+            this.temperature-=1;
         }
     }
 
     public boolean isAllume() {
-        boolean allume;
-        if
+        return true;
     }
 
     public String toString(){
-
+        return "Temperature : "+this.temperature;
     }
 }
